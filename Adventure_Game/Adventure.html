@@ -33,22 +33,45 @@
                     
                  case "blacksmith":
                      alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
-                 break;
-                 case "inn":
-                     alert("You enter the old weather torn inn. The innkeeper asks what he can do for you. Rent a room. Buy food. Sit by the hearth fire.");
-                 break;
+                    Village();
+                    break;
                  case "stable":
                      alert("The stable master inform you that all of the horses have been stolen last night. He asks you for your help");
-                 break;
+                    Village();
+                    break;
+                case "exit":
+                    alert("You leave, THE END");
+                    break;
                  default:
                      alert("I do not understand " + village);
-                break;
-                    
-                           }
+                     Village();
+                    break;
+                case "inn":
+                     Inn();
+                     break;
+                }
              
+             }
              
-             
-         }
+        function Inn(){
+             var inn = prompt("You enter the old weather torn inn. The innkeeper asks what he can do for you. Rent a room. Buy food. Sit by the hearth fire.").toLowerCase();
+            
+            switch(inn){
+            
+                case "buy food":
+                    alert("The innkeeper informs you that you do not have enough money");
+                    Inn();
+                    break;
+                case "sit":
+                    alert("You sit next to the fire for a bit, it warms your body");
+                    Inn();
+                    break;
+                case "leave":
+                    Village();
+                    break;
+            }
+        }
+         
             
             
         </script>
