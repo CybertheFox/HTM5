@@ -7,6 +7,14 @@
         <h1>Adventure Game v1.0</h1>
         <p>made by: Devin Janssen</p>
         <script>
+            var inventory = {
+                sword:0,
+                knife:0,
+                bread:0,
+                meat:0,
+                fish:0,
+                goldkey:0,
+            }
             Start();
          
          function Start(){
@@ -27,12 +35,18 @@
          }
             
          function Village(){
-             var village = prompt("You arrive at a small village. There is a blacksmith, inn, stable and several wooden homes").toLowerCase();
+             var village = prompt("You arrive at a small village. There is a blacksmith, tavern, stable and several wooden homes").toLowerCase();
              
             switch(village){
                     
                  case "blacksmith":
-                     alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
+                    var blacksmith = prompt("The blacksmith scowls at you and says 'I have swords, knives, and );
+                    if(blacksmith == "buy sword"){
+                        alert("You bought a sword");
+                        inventory.sword ++;
+                        alert("swords = "+inventory.sword);
+                    }
+                    
                     Village();
                     break;
                  case "stable":
@@ -42,33 +56,49 @@
                 case "exit":
                     alert("You leave, THE END");
                     break;
-                 default:
+                case "tavern":
+                     Tavern();
+                     break;
+                case "leave":
+                     Forest();
+                     break;
+                default:
                      alert("I do not understand " + village);
                      Village();
                     break;
-                case "inn":
-                     Inn();
-                     break;
                 }
              
              }
              
-        function Inn(){
-             var inn = prompt("You enter the old weather torn inn. The innkeeper asks what he can do for you. Rent a room. Buy food. Sit by the hearth fire.").toLowerCase();
+        function Tavern(){
+             var tavern = prompt("You enter the old weather torn tavern. The tavern owner asks what he can do for you. Rent a room. Buy food. Sit by the hearth fire.").toLowerCase();
             
-            switch(inn){
+            switch(tavern){
             
                 case "buy food":
-                    alert("The innkeeper informs you that you do not have enough money");
-                    Inn();
+                    alert("The tavern owner informs you that you do not have enough money");
+                    Tavern();
                     break;
                 case "sit":
                     alert("You sit next to the fire for a bit, it warms your body");
-                    Inn();
+                    Tavern();
                     break;
                 case "leave":
                     Village();
                     break;
+                default:
+                    alert("I do not understand " + tavern);
+                    Tavern();
+                    break;
+            }
+        }
+        function Forest(){
+            var forest = prompt("You find yourself at the entrance to the forest, there are two paths to take left or right, which do you choose?").toLowerCase();
+            
+            switch(forest){
+                    
+                case "left":
+                    
             }
         }
          
