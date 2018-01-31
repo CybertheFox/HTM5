@@ -10,6 +10,7 @@
             var inventory = {
                 sword:0,
                 knife:0,
+                axe:0,
                 bread:0,
                 meat:0,
                 fish:0,
@@ -19,7 +20,7 @@
          
          function Start(){
                 
-             var playerName = prompt("What is your name traveller?");
+             var playerName = prompt("What is your name traveler?");
              
              alert("Welcome to the land of Lotta Land, " + playerName);
              
@@ -40,13 +41,12 @@
             switch(village){
                     
                  case "blacksmith":
-                    var blacksmith = prompt("The blacksmith scowls at you and says 'I have swords, knives, and );
+                    var blacksmith = prompt("The blacksmith scowls at you and says 'I have swords, knives, and axes'" );
                     if(blacksmith == "buy sword"){
                         alert("You bought a sword");
                         inventory.sword ++;
                         alert("swords = "+inventory.sword);
                     }
-                    
                     Village();
                     break;
                  case "stable":
@@ -67,7 +67,7 @@
                      Village();
                     break;
                 }
-             
+            
              }
              
         function Tavern(){
@@ -98,9 +98,17 @@
             switch(forest){
                     
                 case "left":
+                    alert("The left path looks narrow and barley lit with fallen trees in the way, do you proceed or go back?");
+                    Left_Path();
+                    break();
+                case "right":
+                    alert("The right path looks wide and straight with light shining in, do you proceed or go back?")
                     
             }
         }
+            function Left_Path(){
+                var Left = prompt("adsf").toLowerCase();
+            }
          
             
             
