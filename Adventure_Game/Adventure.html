@@ -7,10 +7,12 @@
         <h1>Adventure Game v1.0</h1>
         <p>made by: Devin Janssen</p>
         <script>
+            
             var inventory = {
                 sword:0,
                 knife:0,
                 axe:0,
+                coins:1000,
                 bread:0,
                 meat:0,
                 fish:0,
@@ -42,10 +44,13 @@
                     
                  case "blacksmith":
                     var blacksmith = prompt("The blacksmith scowls at you and says 'I have swords, knives, and axes'" );
-                    if(blacksmith == "buy sword"){
+                    if(blacksmith == "sword" || blacksmith == "buy sword" &&
+                        inventory.coins >= 100){
                         alert("You bought a sword");
                         inventory.sword ++;
                         alert("swords = "+inventory.sword);
+                        inventory.coins = inventory.coins - 100;
+                        alert("You have "+inventory.coins+" coins remaining");
                     }
                     Village();
                     break;
@@ -100,7 +105,7 @@
                 case "left":
                     alert("The left path looks narrow and barley lit with fallen trees in the way, do you proceed or go back?");
                     Left_Path();
-                    break();
+                    break;
                 case "right":
                     alert("The right path looks wide and straight with light shining in, do you proceed or go back?")
                     
