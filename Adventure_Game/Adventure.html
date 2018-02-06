@@ -12,7 +12,7 @@
                 sword:0,
                 knife:0,
                 axe:0,
-                coins:1000,
+                coins:0,
                 bread:0,
                 meat:0,
                 fish:0,
@@ -54,6 +54,13 @@
                     }
                     Village();
                     break;
+                    else if(blacksmith == "knife" || blacksmith == "buy knife" &&
+                           inventory.coins >= 150){
+                        alert("You bought a knife");
+                        inventory.knife ++;
+                        alert("knife = " +inventory.knife);
+                        inventory.coins = inventory.
+                    }
                  case "stable":
                      alert("The stable master inform you that all of the horses have been stolen last night. He asks you for your help");
                     Village();
@@ -112,7 +119,23 @@
             }
         }
             function Left_Path(){
-                var Left = prompt("adsf").toLowerCase();
+                var Left = prompt("As you walk deeper into down the dark path you get the feeling you're being watched, but you can see light at the end of the path, should you leave or continue down the path?").toLowerCase();
+                
+                switch(Left){
+                    case "continue":
+                    Temple();
+                    break;
+                case "leave":
+                    Forest();
+                    break;
+                default:
+                    alert("I do not understand " + Left);
+                    Left_Path();
+                    break;
+                }
+            }
+            function Temple(){
+                 var temple = prompt("You find an ancient")
             }
          
             
