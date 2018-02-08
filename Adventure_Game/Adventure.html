@@ -54,13 +54,16 @@
                     }
                     Village();
                     break;
-                    else if(blacksmith == "knife" || blacksmith == "buy knife" &&
-                           inventory.coins >= 150){
+                    if(blacksmith == "knife" || blacksmith == "buy knife" &&
+                        inventory.coins >= 150){
                         alert("You bought a knife");
                         inventory.knife ++;
                         alert("knife = " +inventory.knife);
                         inventory.coins = inventory.
+                        alert("You have "+inventory.coins+" coing remaining");
                     }
+                    Village();
+                    break;
                  case "stable":
                      alert("The stable master inform you that all of the horses have been stolen last night. He asks you for your help");
                     Village();
@@ -122,7 +125,7 @@
                 var Left = prompt("As you walk deeper into down the dark path you get the feeling you're being watched, but you can see light at the end of the path, should you leave or continue down the path?").toLowerCase();
                 
                 switch(Left){
-                    case "continue":
+                case "continue":
                     Temple();
                     break;
                 case "leave":
@@ -135,9 +138,35 @@
                 }
             }
             function Temple(){
-                 var temple = prompt("You find an ancient")
+                 var temple = prompt("You find an ancient Temple with an entrance the leads down stairs with torches lighting the way, would you like to enter or leave").toLowerCase();
+                
+                switch(temple){
+                 case "enter":
+                    Tomb();
+                    break;
+                 case "leave":
+                    Forest();
+                    break;
+                    default:
+                        alert("I do not understand " + temple);
+                        Temple();
+                        break;
+                             }
             }
-         
+            Function Maze_Start(){
+                var temple_Maze = prompt("You enter the temple and find that you have three choices for where to go left, right, or forward").toLowerCase();
+                
+                switch(temple_Maze){
+                    case "left":
+                        1/1();
+                                  }
+            }
+            function 1/1(){
+                var 1/1 =prompt("right or forward?").toLowerCase();
+                
+                switch()
+                
+            }
             
             
         </script>
