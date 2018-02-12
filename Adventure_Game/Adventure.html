@@ -142,7 +142,7 @@
                 
                 switch(temple){
                  case "enter":
-                    Tomb();
+                    Maze_Start();
                     break;
                  case "leave":
                     Forest();
@@ -153,20 +153,107 @@
                         break;
                              }
             }
-          //  Function Maze_Start(){
-             //   var temple_Maze = prompt("You enter the temple and find that you have three choices for where to go left, right, or forward").toLowerCase();
+            function Maze_Start(){
+                var temple_Maze = prompt("You enter the temple and find that you have three choices for where to go left, right, or forward").toLowerCase();
                 
-             //   switch(temple_Maze){
-               //     case "left":
-                       // 1/1();
-                                 // }
-          //  }
-          //  function 1/1(){
-            //    var 1/1 =prompt("right or forward?").toLowerCase();
+                switch(temple_Maze){
+                    case "left":
+                        Left_2();
+                        break;
+                    case "forward":
+                        middle_2();
+                        break;
+                    case "right":
+                        Right_2();
+                        break;
+                    default:
+                        alert("I do not understand " + temple_Maze);
+                        Maze_Start();
+                        break;
+                                  }
+            }
+            function Left_2(){
+                var left_2 = prompt("right or forward?").toLowerCase();
                 
-             //   switch()
+                switch(left_2){
+                    case "right":
+                        Left_2();
+                        break;
+                    case "forward":
+                        alert("You come to a dead end");
+                        left_1();
+                        break;
+                    default:
+                        alert("I do not understand " + left_2);
+                        Left_2();
+                        break;
+                                 }
+            function Left_3(){
+                var left_3 = prompt("left, right, or forward?").toLowerCase();
+                    
+                switch(left_3){
+                    case "left":
+                        alert("You come to a dead end");
+                        Left_3();
+                        break;
+                    case "forward":
+                        Left_4();
+                        break;
+                    case "right":
+                        alert("You come to a dead end");
+                        Left_3();
+                        break;
+                    default:
+                        alert("I do not understand " + left_3);
+                        Left_3();
+                        break;
+                                 }
+            }
+            function Left_4(){
+                var left_4 = prompt("forward or right?").toLowerCase;
                 
-           // }
+                switch(left_4){
+                    case "forward":
+                        alert("You come to a dead end");
+                        Left_4();
+                        break;
+                    case "right":
+                        Left_5();
+                        break;
+                    default:
+                        alert("I do not understand " + left_4);
+                        Left_4();
+                        break;
+                                }
+            }
+            function Left_5(){
+                var left_5 = prompt("left or right?").toLowerCase;
+                
+                switch(left_5){
+                    case "left":
+                        Left_6();
+                        break;
+                    case "right":
+                        alert("You come to a dead end");
+                        Left_5();
+                        break;
+                    default:
+                        alert("I do not understand " + left_5);
+                        Left_5();
+                        break;
+                             }
+            }
+            function Left_6(){
+                var left_6 = prompt("forward or right?").ToLowerCase;
+                        
+                switch(left_6){
+                    case "forward":
+                        alert("Good job");
+                        break;
+                             }
+            }
+               
+            
             
             
         </script>
