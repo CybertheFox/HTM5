@@ -12,11 +12,18 @@
                 sword:0,
                 knife:0,
                 axe:0,
-                coins:0,
+                coins:1000,
                 bread:0,
                 meat:0,
                 fish:0,
                 goldkey:0,
+            }
+            
+            var invList = function(){
+                alert("Coins = " + inventory.coins + 
+                     "\nsword = " + inventory.sword + 
+                     "\nknife = " + inventory.knife +
+                     "\naxe = " + inventory.axe);
             }
             Start();
          
@@ -64,6 +71,9 @@
                     }
                     Village();
                     break;
+                case "inventory":
+                    invList();
+                    Village();
                  case "stable":
                      alert("The stable master inform you that all of the horses have been stolen last night. He asks you for your help");
                     Village();
@@ -172,22 +182,36 @@
                         break;
                                   }
             }
+            function Middle_2(){
+                var middle_2 = prompt("right or forward?").toLowerCase();
+                
+                switch(middle_2){
+                    case "forward":
+                        middle_3();
+                        break;
+                    default:
+                        alert("I do not understand " + middle_2);
+                        middle_2();
+                        break;
+                               }
+            }
             function Left_2(){
                 var left_2 = prompt("right or forward?").toLowerCase();
                 
                 switch(left_2){
                     case "right":
-                        Left_2();
+                        Left_3();
                         break;
                     case "forward":
                         alert("You come to a dead end");
-                        left_1();
+                        left_2();
                         break;
                     default:
                         alert("I do not understand " + left_2);
                         Left_2();
                         break;
                                  }
+            }
             function Left_3(){
                 var left_3 = prompt("left, right, or forward?").toLowerCase();
                     
@@ -210,7 +234,7 @@
                                  }
             }
             function Left_4(){
-                var left_4 = prompt("forward or right?").toLowerCase;
+                var left_4 = prompt("forward or right?").toLowerCase();
                 
                 switch(left_4){
                     case "forward":
@@ -227,7 +251,7 @@
                                 }
             }
             function Left_5(){
-                var left_5 = prompt("left or right?").toLowerCase;
+                var left_5 = prompt("left or right?").toLowerCase();
                 
                 switch(left_5){
                     case "left":
@@ -244,14 +268,53 @@
                              }
             }
             function Left_6(){
-                var left_6 = prompt("forward or right?").ToLowerCase;
+                var left_6 = prompt("forward or right?").toLowerCase();
                         
                 switch(left_6){
                     case "forward":
-                        alert("Good job");
+                        Left_7();
+                        break;
+                    case "right":
+                        alert("You come to a dead end");
+                        Left_6();
+                        break;
+                    default:
+                        alert("I do not understand " + left_6);
+                        Left_6();
                         break;
                              }
             }
+            function Left_7(){
+                var left_7 = prompt("left or right").toLowerCase();
+                
+                switch(left_7){
+                    case "left":
+                        alert("You come to a dead end");
+                        Left_7();
+                        break;
+                    case "right":
+                        Maze_End();
+                        break;
+                    default:
+                        alert("I do not understand " + left_7);
+                        Left_7();
+                        break;
+                             }
+            }
+            function Maze_End(){
+                var maze_end = prompt("Congratulations you did it! go get the treasure or leave it").toLowerCase();
+                
+                switch(maze_end){
+                    case "leave":
+                        alert("You ded");
+                        break;
+                    default:
+                        alert("I do not understand " + maze_end);
+                        Maze_End();
+                        break;
+                               }
+            }
+        
                
             
             
