@@ -171,29 +171,18 @@
                         Left_2();
                         break;
                     case "forward":
-                        middle_2();
+                        alert("You come to a dead end");
+                        Maze_Start()
                         break;
                     case "right":
-                        Right_2();
+                        alert("You come to a dead end");
+                        Maze_Start()
                         break;
                     default:
                         alert("I do not understand " + temple_Maze);
                         Maze_Start();
                         break;
                                   }
-            }
-            function Middle_2(){
-                var middle_2 = prompt("right or forward?").toLowerCase();
-                
-                switch(middle_2){
-                    case "forward":
-                        middle_3();
-                        break;
-                    default:
-                        alert("I do not understand " + middle_2);
-                        middle_2();
-                        break;
-                               }
             }
             function Left_2(){
                 var left_2 = prompt("right or forward?").toLowerCase();
@@ -306,7 +295,12 @@
                 
                 switch(maze_end){
                     case "leave":
-                        alert("You ded");
+                        alert("You leave the treasure for some other lucky adventurer and go and live on your days");
+                        alert("THE END");
+                        break;
+                    case "take":
+                        alert("You take the treasure and head towards the village to party and spread the treause around.");
+                        alert("THE END");
                         break;
                     default:
                         alert("I do not understand " + maze_end);
