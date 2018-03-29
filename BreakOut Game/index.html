@@ -147,9 +147,11 @@
                 dy = -dy;
             }
             else {
-                alert("GAME OVER");
-                document.location.reload();
-            }
+                lives--;
+                if(!lives) {
+                    alert("GAME OVER");
+                    document.location.reload();
+                }
             else {
                 x = canvs.width/2;
                 y = canvas.height-30;
@@ -169,12 +171,10 @@
         
         x += dx;
         y += dy;
-    requestAnimationFrame(draw);
+        requestAnimationFrame(draw);
     }
     
     draw();
-    
-    setInterval(draw, 10);
 </script>
 
 </body>
