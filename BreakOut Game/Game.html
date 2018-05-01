@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop - lesson 10: finishing up</title>
-    <style>* { padding: 0; margin: 0; } canvas { background: #eee; display: block; margin: 0 auto; }</style>
+    <style>* { padding: 0; margin: 0; } canvas { background: #7D7D7D; display: block; margin: 0 auto; }</style>
 </head>
 <body>
 
@@ -89,7 +89,7 @@
     function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#00C1FF";
         ctx.fill();
         ctx.closePath();
     }
@@ -97,7 +97,7 @@
     function drawPaddle() {
         ctx.beginPath();
         ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#00C1FF";
         ctx.fill();
         ctx.closePath();
     }
@@ -112,7 +112,7 @@
                     bricks[c][r].y = brickY;
                     ctx.beginPath();
                     ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                    ctx.fillStyle = "#0095DD";
+                    ctx.fillStyle = "#00C1FF";
                     ctx.fill();
                     ctx.closePath();
                 }
@@ -122,13 +122,13 @@
     
     function drawScore() {
         ctx.font = "16px Arial";
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#00C1FF";
         ctx.fillText("Score: "+score, 8, 20);
     }
     
     function drawLives() {
         ctx.font = "16px Arial";
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#00C1FF";
         ctx.fillText("Lives: "+lives, canvas.width-65, 20);
     }
     
